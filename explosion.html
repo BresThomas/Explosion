@@ -1,0 +1,50 @@
+<html>
+    <body>
+        <svg viewBox="-100 -100 200 200"
+        style="width:50vmin;height:50vmin;">
+            <g id="boules" transform="scale(1,-1)" fill="red"
+                stroke="black" style="cursor:pointer;">
+                <circle cx="0" cy="0" r="50"/>
+                <circle cx="0" cy="100" r="25"/>
+            </g>
+        </svg>
+    </body>
+
+    <script>
+        // define global parameters
+        const N = 50; // number of balls
+        const C = 0.01; // friction coefficient
+        const D = 1; // density
+        const g = 9.81; // acceleration due to gravity
+        const dt = 0.05; // time step
+        const Rmax = 20; // maximum radius of the balls
+        const thetaMax = Math.PI / 2; // maximum angle of the initial velocity
+        const Vmax = 10; // maximum initial velocity
+
+        // create arrays of size N
+        let cx = new Array(N);
+        let cy = new Array(N);
+        let vx = new Array(N);
+        let vy = new Array(N);
+        let r = new Array(N);
+        let c = new Array(N);
+        let m = new Array(N);
+
+        // initialize cx and cy to zero
+        cx.fill(0);
+        cy.fill(0);
+        
+        for (i=0; i<N; i++){
+            V = Math.random()*Vmax;
+            thetaI = Math.random()*2*thetaMax-thetaMax;
+            vx[i]=V*Math.sin(themaI);
+            vy[i]=V*Math.cos(thetaI);
+            r[i] = Math.random()*Tmax;
+            c[i]=C*r[i];
+            m[i]=Math.PI*(r[i]*r[i])*D;
+        }
+
+        
+
+    </script>
+</html>
