@@ -1,5 +1,8 @@
 # Readme for SVG Bouncing Balls Animation
 
+
+![explosion_gif](https://user-images.githubusercontent.com/59121834/225051905-65131869-80d0-4351-b431-4835c515fae7.gif)
+
 This is a simple JavaScript program that creates an animation of bouncing balls inside an SVG element. When the user clicks the screen, the animation starts or stops.
 
 ## How to Run the Program
@@ -21,7 +24,4 @@ The update function updates the positions and velocities of the balls based on t
 ## Customizing the Program
 
 You can customize the program by changing the global parameters, including the number of balls, the friction coefficient, the density, and the maximum radius of the balls, among others. You can also change the SVG attributes of the balls, including the fill and stroke colors, and the cursor style. Additionally, you can modify the HTML and CSS to change the appearance and behavior of the program.
-
-
-![explosion_gif](https://user-images.githubusercontent.com/59121834/225051905-65131869-80d0-4351-b431-4835c515fae7.gif)
 
