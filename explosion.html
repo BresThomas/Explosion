@@ -4,8 +4,6 @@
         style="width:50vmin;height:50vmin;">
             <g id="boules" transform="scale(1,-1)" fill="red"
                 stroke="black" style="cursor:pointer;">
-                <circle cx="0" cy="0" r="50"/>
-                <circle cx="0" cy="100" r="25"/>
             </g>
         </svg>
     </body>
@@ -37,14 +35,48 @@
         for (i=0; i<N; i++){
             V = Math.random()*Vmax;
             thetaI = Math.random()*2*thetaMax-thetaMax;
-            vx[i]=V*Math.sin(themaI);
+            vx[i]=V*Math.sin(thetaI);
             vy[i]=V*Math.cos(thetaI);
-            r[i] = Math.random()*Tmax;
+            r[i] = Math.random()*Rmax;
             c[i]=C*r[i];
             m[i]=Math.PI*(r[i]*r[i])*D;
         }
 
-        
+        boules = document.getElementById("boules");
+
+        // Add circle elements to the <g> group
+        for (i = 0; i < N; i++) {
+            circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            circle.setAttribute("cx", cx[i]);
+            circle.setAttribute("cy", cy[i]);
+            circle.setAttribute("vx", vx[i]);
+            circle.setAttribute("vy", vy[i]);
+            circle.setAttribute("r", r[i]);
+            boules.append(circle);
+        }
+
+        // Retrieve array of circle elements
+        elements = boules.getElementsByTagName("circle");
+
+        // Set attributes of the i-th ball
+        for (i = 0; i < N; i++) {
+        elements[i].setAttribute("fill", "yellow");
+        }
+
+
+        function update() {
+
+            for (i = 0; i < N; i++) {
+                cx[i] = cx[i] + dt*vx[i];
+                cy[i] = cy[i] + dt*vx[i];
+                vx[i] = Math.pow(1+(dt*C)/m[i], -1)*(vx[i-1]+dt(0));
+                vy[i] = Math.pow(1+(dt*C)/m[i], -1)*(vy[i-1]+dt(0-g));
+            }
+        }
+
+
+        function setTimeout() {
+        }
 
     </script>
 </html>
