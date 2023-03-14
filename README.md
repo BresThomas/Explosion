@@ -5,12 +5,6 @@
 
 This is a simple JavaScript program that creates an animation of bouncing balls inside an SVG element. When the user clicks the screen, the animation starts or stops.
 
-## How to Run the Program
-
-To run the program, you can copy the code and paste it into a text editor, then save the file with an .html extension. Then, you can open the file in a web browser by double-clicking on it.
-
-Alternatively, you can copy the code and paste it into an online code editor like CodePen or JSFiddle and run it from there.
-
 ## How the Program Works
 
 The program uses SVG to draw a circle for each ball, and animates the balls using simple physics equations. The program defines some global parameters, including the number of balls, the friction coefficient, the density, and the maximum radius of the balls, among others.
