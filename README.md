@@ -1,4 +1,4 @@
-# Readme for SVG Bouncing Balls Animation
+# SVG Bouncing Balls Animation
 
 This is a JavaScript program that creates an animation of bouncing balls inside an SVG element. When the user clicks the screen, the animation starts or stops.
 
